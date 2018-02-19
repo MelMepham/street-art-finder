@@ -1,0 +1,49 @@
+{
+  "name": "street-art-finder",
+  "version": "1.0.0",
+  "main": "./server/index.js",
+  "repository": "https://github.com/MelMepham/street-art-finder.git",
+  "author": "Melissa Mepham <m.a.mepham@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch server & webpack --watch",
+    "start": "node server",
+    "test": "jest --watchAll",
+    "postinstall": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "bundle": "^2.1.0",
+    "express": "^4.16.2",
+    "knex": "^0.14.4",
+    "nock": "^9.1.6",
+    "nodemon": "^1.15.1",
+    "pg": "^7.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "superagent": "^3.8.2",
+    "supertest": "^3.0.0",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "jest": "^22.3.0",
+    "sqlite3": "^3.1.13"
+  }
+}
