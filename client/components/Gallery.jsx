@@ -3,16 +3,23 @@ import {connect} from 'react-redux'
 
 
 
-function Gallery (props) {
+function Gallery ({artInfo}) {
+
     return (
-    <div>
-        <h1>"I want this to show something from the api"</h1>
+      <div>
+        {artInfo.map(art => {
+          console.log('artid',art.id)
+        return (
+          <b>{art.id}</b>
+          )
+      })}
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
   return {
+    artInfo: state.artInfo
   }
 }
 
