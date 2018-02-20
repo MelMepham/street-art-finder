@@ -29,13 +29,6 @@ function postArt(artDetails, testDb) {
 }
 
 
-//put me in a function
-// const db = testDb || connection
-// db('art')
-//   .join('users', 'users.id', '=', 'art.user_id')
-//   .select('users.userName', 'art.id')
-//   .then((data) => {
-//   })
 
 //put me in a function
 // const db = testDb || connection
