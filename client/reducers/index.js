@@ -6,4 +6,5 @@ import artInfo from './artInfo'
 export default combineReducers({
   ErrorMessage,
   artInfo
+  add
 })
