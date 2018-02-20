@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 var server = require('../server/server')
-const db = require('../db')
+const db = require('../server/db')
 const router = express.Router()
 
 router.get('/api/v1/art', (req, res) => {
@@ -35,9 +35,12 @@ router.get('/api/v1/favorites', (req, res) => {
 })
 
 router.post('/api/v1/art', (req, res) => {
-  console.log('typeof')
-  console.log('apiRoutes folder', req.body)
   db.postArt(req.body)
+  .then(res => console.log(res))
+})
+
+router.post('/api/v1/users', (req, res) => {
+  db.postUser(req.body)
   .then(res => console.log(res))
 })
 

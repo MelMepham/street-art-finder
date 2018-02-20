@@ -79,3 +79,27 @@ export function addArt(artDetails) {
       })
     }
   }
+
+  export const addNewUser= (userDetails) => {
+    console.log('action', userDetails)
+    return {
+      type: 'ADD_USER',
+      userDetails
+    }
+  }
+
+  export function addUser(userDetails) {
+    console.log('actions', userDetails)
+    return (dispatch) => {
+      console.log('testUser')
+      return request
+        .post('/api/v1/users')
+        .send(userDetails)
+        .then(res => {
+          dispatch(addNewUser(res.body))
+        .catch(err => {
+          dispatch(err.message)
+        })
+        })
+      }
+    }
