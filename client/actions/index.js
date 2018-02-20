@@ -1,6 +1,7 @@
 import request from 'superagent'
 
 export const SHOW_ERROR = 'SHOW_ERROR'
+
 export const RECEIVE_ARTINFO = 'RECEIVE_ARTINFO'
 
 export const showError = (errorMessage) => {
@@ -30,6 +31,7 @@ export function getArtInfo (artInfo) {
         console.log({err});
         dispatch(showError(err.message))
       })
+
     }
   }
 

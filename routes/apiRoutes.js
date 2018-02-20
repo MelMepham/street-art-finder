@@ -34,6 +34,7 @@ router.get('/api/v1/favorites', (req, res) => {
     })
 })
 
+
 router.post('/api/v1/art', (req, res) => {
   console.log('typeof')
   console.log('apiRoutes folder', req.body)
@@ -41,5 +42,5 @@ router.post('/api/v1/art', (req, res) => {
   .then(res => console.log(res))
 })
 
-Adding art works
+
 module.exports = router
