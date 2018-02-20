@@ -5,7 +5,6 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/api/v1/art', (req, res) => {
-  console.log(req)
   db.getArt()
     .then(art => {
       res.json({art:art})
@@ -16,8 +15,7 @@ router.get('/api/v1/art', (req, res) => {
 })
 
 router.get('/api/v1/users', (req, res) => {
-  console.log(req)
-  db.getArt()
+  db.getUsers()
     .then(users => {
       res.json({users:users})
     })
@@ -26,4 +24,13 @@ router.get('/api/v1/users', (req, res) => {
     })
 })
 
+router.get('/api/v1/favorites', (req, res) => {
+  db.getFavorites()
+    .then(favorites => {
+      res.json({favorites:favorites})
+    })
+    .catch(err => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
+})
 module.exports = router
