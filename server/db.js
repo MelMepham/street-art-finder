@@ -1,12 +1,13 @@
 const environment = process.env.NODE_ENV || 'development'
-const config = require('./knexfile')[environment]
+const config = require('../knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
   getArt,
   getUsers,
   getFavorites,
-  postArt
+  postArt,
+  postUser
 }
 
 function getArt (testDb) {
@@ -23,10 +24,15 @@ function getFavorites (testDb) {
   const db = testDb || connection
   return db('favorites').select()
 }
+
 function postArt(artDetails, testDb) {
-  console.log('test3')
   const db = testDb || connection
   return db('art').insert(artDetails)
+}
+
+function postUser(userDetails, testDb) {
+  const db = testDb || connection
+  return db('users').insert(userDetails)
 }
 
 

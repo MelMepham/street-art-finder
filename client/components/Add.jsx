@@ -6,11 +6,15 @@ class Add extends React.Component {
   constructor(props) {
     super(props)
       this.state = {
-        suburb: '',
-        address: '',
+        dateFound: '',
+        image: '',
         artist: '',
+        address: '',
+        suburb: '',
+        description: '',
         style: ''
       }
+
       this.handleChange = this.handleChange.bind(this)
       this.submit = this.submit.bind(this)
     }
@@ -31,6 +35,9 @@ class Add extends React.Component {
     console.log(this.state)
     return (
       <form>
+        <label>Date Found</label>
+        <input type="date" name="dateFound" onChange={this.handleChange} />
+
         <label>Suburb</label>
         <input type="text" name="suburb" onChange={this.handleChange} />
 
@@ -40,8 +47,8 @@ class Add extends React.Component {
         <label>Artist</label>
         <input type="text" name="artist" onChange={this.handleChange} />
 
-        // <label>Description</label>
-        // <input type="text" name="descr" onChange={this.handleChange} />
+        <label>Description</label>
+        <input type="text" name="description" onChange={this.handleChange} />
 
         <label>Style</label>
         <select name="style" onChange={this.handleChange} >
@@ -49,6 +56,11 @@ class Add extends React.Component {
           <option>Abstract</option>
           <option>Realistic</option>
         </select>
+
+        <br />
+        <label>Add Image</label>
+        <input type="file" name="image" accept="image/*" />
+        <br />
 
         <button onClick={this.submit}>Add Art</button>
 

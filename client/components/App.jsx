@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Gallery from './Gallery'
 import Add from './Add'
 import ProfileDetails from './ProfileDetails'
+import AddProfileInfo from './AddProfileInfo'
 
 import ErrorMessage from './ErrorMessage'
 import {getArtInfo} from '../actions/index'
@@ -15,15 +16,16 @@ class App extends React.Component {
     this.props.dispatch(getArtInfo())
     this.props.dispatch(getUsersInfo())
   }
-  // <Add />
   // <Gallery />
 
   render () {
     return (
       <div>
           <h1>Hello World</h1>
+          <Add />
           <ErrorMessage />
           <ProfileDetails />
+          <AddProfileInfo />
       </div>
     )
   }
