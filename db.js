@@ -38,3 +38,12 @@ function postArt(artDetails, testDb) {
 //   .select()
 //   .then((data) => {
 //   })
+
+//put me in a function
+// const db = testDb || connection
+// db('art')
+//   .join('favorites', 'artFav_id', 'favorites.artFav_id')
+//   .where('favorites.userFav_id', 'userFav_id')
+//   .select()
+//   .then((data) => {
+//   })
