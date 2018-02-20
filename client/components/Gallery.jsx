@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 function Gallery (props) {
     return (
     <div>
-        <h1>Gallery</h1>
+        <h1>"I want this to show something from the api"</h1>
     </div>
   )
 }
