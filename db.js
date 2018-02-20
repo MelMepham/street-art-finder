@@ -7,6 +7,11 @@ module.exports = {
   getUsers,
   getFavorites,
   postArt
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3932e4f9677a5c6ca822fd9469b36fefe153fe45
 }
 
 function getArt (testDb) {

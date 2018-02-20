@@ -1,6 +1,10 @@
 import request from 'superagent'
 
 export const SHOW_ERROR = 'SHOW_ERROR'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3932e4f9677a5c6ca822fd9469b36fefe153fe45
 export const RECEIVE_ARTINFO = 'RECEIVE_ARTINFO'
 
 export const showError = (errorMessage) => {
@@ -30,6 +34,10 @@ export function getArtInfo (artInfo) {
         console.log({err});
         dispatch(showError(err.message))
       })
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3932e4f9677a5c6ca822fd9469b36fefe153fe45
     }
   }
 
@@ -54,5 +62,10 @@ export function addArt(artDetails) {
         dispatch(err.message)
       })
       })
+<<<<<<< HEAD
     }
   }
+=======
+  }
+}
+>>>>>>> 3932e4f9677a5c6ca822fd9469b36fefe153fe45
