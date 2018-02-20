@@ -1,9 +1,11 @@
 const environment = process.env.NODE_ENV || 'development'
 const config = require('./knexfile')[environment]
-const db = require('knex')(config)
+const connection = require('knex')(config)
 
 module.exports = {
-  getArt
+  getArt,
+  getUsers,
+  getFavorites
 }
 
 function getArt (testDb) {
@@ -11,15 +13,20 @@ function getArt (testDb) {
   return db('art').select()
 }
 
-db('users')
-  .join('art', 'art.id', '=', 'users.art_id')
-  .select('art.id', 'users.userName')
-  .then((data) => {
-    console.log(data)
-  })
+function getUsers (testDb) {
+  const db = testDb || connection
+  return db('users').select()
+}
 
+function getFavorites (testDb) {
+  const db = testDb || connection
+  return db('favorites').select()
+}
 
-// function getUser (testDb) {
-//   const db = testDb || connection
-//   return db('users').select()
-// }
+//put me in a function
+// const db = testDb || connection
+// db('art')
+//   .join('users', 'users.id', '=', 'art.user_id')
+//   .select('users.userName', 'art.id')
+//   .then((data) => {
+//   })

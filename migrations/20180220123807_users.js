@@ -9,7 +9,6 @@ exports.up = function(knex, Promise) {
     table.string('website')
     table.string('facebook')
     table.string('contactInfo')
-    table.integer('art_id')
     })
 };
 
