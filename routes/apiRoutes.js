@@ -33,4 +33,13 @@ router.get('/api/v1/favorites', (req, res) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
+router.post('/api/v1/art', (req, res) => {
+  console.log('typeof')
+  console.log('apiRoutes folder', req.body)
+  db.postArt(req.body)
+  .then(res => console.log(res))
+})
+
+Adding art works
 module.exports = router

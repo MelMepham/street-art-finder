@@ -6,6 +6,7 @@ module.exports = {
   getArt,
   getUsers,
   getFavorites
+  postArt
 }
 
 function getArt (testDb) {
@@ -22,6 +23,12 @@ function getFavorites (testDb) {
   const db = testDb || connection
   return db('favorites').select()
 }
+function postArt(artDetails, testDb) {
+  console.log('test3')
+  const db = testDb || connection
+  return db('art').insert(artDetails)
+}
+
 
 //put me in a function
 // const db = testDb || connection
