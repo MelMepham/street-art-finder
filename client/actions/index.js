@@ -29,6 +29,9 @@ export function getArtInfo (artInfo) {
       .catch(err => {
         console.log({err});
         dispatch(showError(err.message))
+      })
+    }
+  }
 
 export const addNewArt= (artDetails) => {
   console.log('action', artDetails)
