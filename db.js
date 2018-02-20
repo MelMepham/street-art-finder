@@ -5,7 +5,7 @@ const connection = require('knex')(config)
 module.exports = {
   getArt,
   getUsers,
-  getFavorites
+  getFavorites,
   postArt
 }
 

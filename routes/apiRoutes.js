@@ -41,5 +41,4 @@ router.post('/api/v1/art', (req, res) => {
   .then(res => console.log(res))
 })
 
-Adding art works
 module.exports = router
