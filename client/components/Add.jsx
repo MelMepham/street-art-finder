@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 class Add extends React.Component {
   constructor(props) {
-    super(props) 
+    super(props)
       this.state = {
         suburb: '',
         address: '',
@@ -26,7 +26,7 @@ class Add extends React.Component {
       console.log('submit', this.state)
     }
 
-  
+
   render() {
     console.log(this.state)
     return (
@@ -40,8 +40,8 @@ class Add extends React.Component {
         <label>Artist</label>
         <input type="text" name="artist" onChange={this.handleChange} />
 
-        <label>Description</label>
-        <input type="text" name="descr" onChange={this.handleChange} />
+        // <label>Description</label>
+        // <input type="text" name="descr" onChange={this.handleChange} />
 
         <label>Style</label>
         <select name="style" onChange={this.handleChange} >
