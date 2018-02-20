@@ -6,7 +6,6 @@ module.exports = {
   getArt,
   getUsers,
   getFavorites
-  postArt
 }
 
 function getArt (testDb) {
