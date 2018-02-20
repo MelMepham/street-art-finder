@@ -1,20 +1,27 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Gallery from './Gallery'
+import Add from './Add'
 
+import ErrorMessage from './ErrorMessage'
+import {getArtInfo} from '../actions/index'
 
-function App (props) {
+class App extends React.Component {
+
+  componentDidMount() {
+    this.props.dispatch(getArtInfo())
+  }
+
+  render () {
     return (
-    <div>
-        <h1>Hello World</h1>
-        <Gallery />
-    </div>
-  )
-}
-
-const mapStateToProps = (state) => {
-  return {
+      <div>
+          <h1>Hello World</h1>
+          <Gallery />
+          <Add />
+          <ErrorMessage />
+      </div>
+    )
   }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect()(App)

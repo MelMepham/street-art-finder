@@ -9,6 +9,8 @@ exports.up = function(knex, Promise) {
     table.string('suburb')
     table.string('description')
     table.string('style')
+    table.integer('user_id')
+
   })
 };
 
