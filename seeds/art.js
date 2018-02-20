@@ -5,7 +5,7 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('art').insert([
-        {id: 101, dateFound: '09052012', image: '', artist: '', address: '', suburb: '', description: '', style: '', user_id: 12},
+        {id: 101, dateFound: '09052012', image: '', artist: '', address: '', suburb: '', description: '', style: ''},
       ]);
     });
 };
