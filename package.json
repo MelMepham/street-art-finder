@@ -8,11 +8,13 @@
   "scripts": {
     "dev": "nodemon --watch server & webpack --watch",
     "start": "node server",
-    "test": "jest --watchAll",
+    "test": "jest --watch",
     "postinstall": "webpack",
     "knex": "knex",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
+
   "babel": {
     "presets": [
       "env",
@@ -39,13 +41,13 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "superagent": "^3.8.2",
-    "supertest": "^3.0.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
-    "jest": "^22.3.0",
+    "jest": "^22.4.2",
+    "supertest": "^3.0.0",
     "sqlite3": "^3.1.13"
   }
 }
